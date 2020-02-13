@@ -13,7 +13,7 @@ development:
   <<: *default
   database: freemarket_sample_68b_development
   
-  
+
 test:
   <<: *default
   database: freemarket_sample_68b_test
