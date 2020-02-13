@@ -3,28 +3,48 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false ,primary|
 |nickname|string|null: false ,unique: true|
 |email|string|null: false , unique: true|
 |password|string|null: false , unique: true|
-|first-name|string|null: false|
-|last-name|string|null: false|
-|first-furigana|string|null: false|
-|last-furigana|string|null: false|
-|birth-year|string|null: false|
-|birth-month|string|null: false|
-|birth-day|string|null: false|
-|post-number|string|null: false|
+|first_name|string|null: false|
+|last_name|string|null: false|
+|f_first_name|string|null: false|
+|f_last_name|string|null: false|
+|birthday_year|string|null: false|
+|birthday_month|string|null: false|
+|birthday_day|string|null: false|
+### Association
+- has_one :adress
+- has_one :credits
+- has_many :items
+
+
+## addressテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false ,primary|
+|postal_code|string|null: false|
 |prefectures|string|null: false|
-|city|string|:null: false|
-|house-number|string|null: false|
+|municipalities|string|:null: false|
+|address|string|null: false|
 |building|string| |
-|destination-f-name|string|: |
-|destination-l-name|string|: |
-|phone-number|string| |
+|d_first_name|string|: |
+|d_last-name|string|: |
+|phone_number|string| |
 |creditcard-number|string|null: false , unique: true|
 ### Association
-- has_many :items
+- belongs_to :user
+
+## creditsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false ,primary|
+|card_number|||
+|year|||
+|month|||
+|security_number||
+### Association
+- belongs_to :user
 
 ## itemsテーブル
 |Column|Type|Options|
@@ -39,6 +59,12 @@
 |postage|string|null: false|
 |region|string|null: false|
 |shipping-days|string|null: false|
-|item-price|string|null: false|
+|price|string|null: false|
 ### Association
-- belongs_to :user
+- has
+
+## categoriesテーブル
+
+## brandsテーブル
+
+## imagesテーブル
