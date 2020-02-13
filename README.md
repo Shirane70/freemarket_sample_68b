@@ -14,13 +14,13 @@
 |birth-year|string|null: false|
 |birth-month|string|null: false|
 |birth-day|string|null: false|
-|destination-f-name||: |
-|destination-l-name||: |
 |post-number|string|null: false|
 |prefectures|string|null: false|
 |city|string|:null: false|
 |house-number|string|null: false|
 |building|string| |
+|destination-f-name|string|: |
+|destination-l-name|string|: |
 |phone-number|string| |
 |creditcard-number|string|null: false , unique: true|
 ### Association
