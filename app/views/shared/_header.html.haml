@@ -1,0 +1,28 @@
+%header.pcHeader
+  .headerInner
+    .mainHeader
+      %h1.icon
+        = link_to image_tag("logo.png", class: "icon_btn"), "#"
+      .searchBox
+        = form_with url: informations_path, local: true do |form|
+          = form.text_field :text, class: "searchBox--input", placeholder: "キーワードから探す"
+          .search-rightBox
+            = form.submit "", class: "submit-btn"
+            = image_tag("icon-search-1.png", width: '20px', height: '20px', class: "search-icon")
+    .nav
+      %ul.listsLeft
+        %li.listsLeft__item.listsLeft__item--first
+          = link_to "カテゴリー", "#", id: "catBtn"
+        %li.listsLeft__item.listsRight__item--first
+          = link_to "ブランド", "#", id: "brandBtn"
+      %ul.listsRight
+        %li.listsRight__item.listsRight__item--login
+          = link_to "ログイン", "#"
+        %li.listsRight__item.listsRight__item--new
+          = link_to "新規会員登録", "#"
+
+
+
+
+
+
