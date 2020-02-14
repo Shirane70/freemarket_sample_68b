@@ -16,6 +16,7 @@
 ### Association
 - has_one :adress
 - has_one :credit
+- has_many :items
 
 ## addressテーブル
 |Column|Type|Options|
@@ -43,25 +44,38 @@
 ### Association
 - belongs_to :user
 
+
+## searchesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|category_id|integer|foreign_key :true|
+|brand_id|integer|foreign_key :true|
+### Association
+- belongs_to :category
+- belongs_to :brand
+
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |path|interger||
 ### Association
-- has_many :brands
+- has_many :searches
+- has_many :items
 
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |category_id|integer|foreign_key :true|
 ### Association
-- belongs_to :category
+- has_many :searches
 - has_many :items
 
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|user_id|integer|foreign_key :true|
 |brand_id|integer|foreign_key :true|
+|category_id|integer|foreign_key :true|
 |name|string|null: false|
 |description|text|null: false|
 |state|text|null: false|
@@ -70,6 +84,8 @@
 |shipping-days|string|null: false|
 |price|interger|null: false|
 ### Association
+- belongs_to :user
+- belongs_to :category
 - belongs_to :brand
 - has_many :images
 
