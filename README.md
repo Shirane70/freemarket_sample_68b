@@ -48,7 +48,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |path|integer||
-|category|string||null: false|
 ### Association
 - has_many :categories
 
