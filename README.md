@@ -43,26 +43,25 @@
 ### Association
 - belongs_to :user
 
-
-## brandsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|path|integer||
-### Association
-- has_many :categories
-
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |path|interger||
-|brand_id|integer|foreign_key :true|
 ### Association
-- belongs_to :brand
+- has_many :brands
+
+## brandsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|category_id|integer|foreign_key :true|
+### Association
+- belongs_to :category
+- has_many :items
 
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|category_id|integer|foreign_key :true|
+|brand_id|integer|foreign_key :true|
 |name|string|null: false|
 |description|text|null: false|
 |state|text|null: false|
@@ -71,7 +70,7 @@
 |shipping-days|string|null: false|
 |price|interger|null: false|
 ### Association
-- belongs_to :category
+- belongs_to :brand
 - has_many :images
 
 ## imagesテーブル
