@@ -48,7 +48,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |path|integer||
-|category_id|integer||primary|
+|category|string||null: false|
 ### Association
 - has_many :categories
 
@@ -73,6 +73,7 @@
 |price|interger|null: false|
 ### Association
 - belongs_to :category
+- has_many :images
 
 ## imagesテーブル
 |Column|Type|Options|
