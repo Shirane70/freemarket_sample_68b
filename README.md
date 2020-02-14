@@ -10,61 +10,74 @@
 |last_name|string|null: false|
 |f_first_name|string|null: false|
 |f_last_name|string|null: false|
-|birthday_year|string|null: false|
-|birthday_month|string|null: false|
-|birthday_day|string|null: false|
+|birthday_year|integer|null: false|
+|birthday_month|integer|null: false|
+|birthday_day|integer|null: false|
 ### Association
 - has_one :adress
-- has_one :credits
-- has_many :items
-
+- has_one :credit
 
 ## addressテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false ,primary|
-|postal_code|string|null: false|
+|user_id|integer|foreign_key :true|
+|postal_code|integer|null: false|
 |prefectures|string|null: false|
 |municipalities|string|:null: false|
 |address|string|null: false|
 |building|string| |
-|d_first_name|string|: |
-|d_last-name|string|: |
-|phone_number|string| |
-|creditcard-number|string|null: false , unique: true|
+|d_first_name|string|null: false|
+|d_last-name|string|null: false|
+|phone_number|integer|null: false|
 ### Association
 - belongs_to :user
 
 ## creditsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false ,primary|
-|card_number|||
-|year|||
-|month|||
-|security_number||
+|user_id|integer|foreign_key :true|
+|card_number|integer||
+|year|integer|null: false|
+|month|integer|null: false|
+|security_number|integer|null: false|
 ### Association
 - belongs_to :user
+
+
+## brandsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|path|integer||
+|category_id|integer||primary|
+### Association
+- has_many :categories
+
+## categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|path|interger||
+|brand_id|integer|foreign_key :true|
+### Association
+- belongs_to :brand
 
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer||null: false , primary|
-|image|text|null: false| |
+|category_id|integer|foreign_key :true|
 |name|string|null: false|
-|description|text| |
-|category|string| unique: true|
-|brand|string| unique: true|
-|state|text| |
+|description|text|null: false|
+|state|text|null: false|
 |postage|string|null: false|
 |region|string|null: false|
 |shipping-days|string|null: false|
-|price|string|null: false|
+|price|interger|null: false|
 ### Association
-- has
-
-## categoriesテーブル
-
-## brandsテーブル
+- belongs_to :category
 
 ## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|item_id|integer||foreign_key :true|
+|image|text|unique: true|
+### Association
+- belongs_to :item
