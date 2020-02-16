@@ -7,7 +7,6 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore the default SQLite database.
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -26,3 +25,5 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/public/uploads/*
+.DS_store
