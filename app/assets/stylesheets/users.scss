@@ -484,3 +484,26 @@
     }
   }
 }
+.logout_container{
+  width: 700px;
+  height: 50px;
+  padding: 65px 190px;
+  background-color: #fff;
+  .logoutBox{
+    background-color: rgb(0, 206, 195);
+    
+    text-align: center;
+    line-height: 50px;
+    a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+    }
+    .logoutBtn{
+      padding: 17px 125px;
+      background-color: rgb(0, 206, 195); 
+      width: 100%;
+      height: 5em;
+    }
+  }
+}
