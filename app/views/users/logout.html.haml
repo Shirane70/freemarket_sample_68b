@@ -1,0 +1,11 @@
+.wrapper
+  = render "shared/header"
+  .main_background
+    .l_container
+      = render "shared/nav_side"
+      .logout_container
+        .logoutBox
+          = link_to "#", class: "logoutBtn" do
+            ログアウト
+  = render "shared/footer"
+  

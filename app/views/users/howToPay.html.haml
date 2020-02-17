@@ -1,0 +1,20 @@
+.wrapper
+  = render "shared/header"
+  .main_background
+    .l_container
+      = render "shared/nav_side"
+      .credit_registration_container
+        %h2.subtitleBox
+          支払い方法
+        .creditBox
+          .text
+            クレジットカード一覧
+          .darkSkyblue_btn
+            = link_to "#", class: "blue_btn" do
+              %i.fas.fa-credit-card
+              クレジットカードを追加する
+        .how_to_payBox
+          = link_to "#", class: "pay_link" do
+            支払い方法について
+            %i.fas.fa-chevron-right
+  = render "shared/footer"

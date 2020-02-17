@@ -1,0 +1,19 @@
+.main
+  .myPage_user_icon
+    = link_to '#', class: "myPage_linkBtn" do
+      %div
+        = image_tag 'member_photo_noimage_thumb', class: 'image'
+      %h2.my_user_name
+        taku103
+      .myPage_number
+        .evaluation
+          評価
+          %span
+            0
+        .selling
+          出品数
+          %span
+            0
+  = render "shared/myTabs_box/notification_tab"
+  = render "shared/myTabs_box/buy_tab"
+
