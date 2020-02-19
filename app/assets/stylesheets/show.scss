@@ -147,6 +147,7 @@
               border-radius: 40px;
               color: #3CCACE;
               border: 1px solid #ffb340;
+              list-style: none;
             }
           }
           ul {
@@ -154,6 +155,7 @@
             display: flex;
             li.optionalBtn {
               font-size: 14px;
+              list-style: none;
               a {
                 padding: 6px 10px;
                 display: inline-block;
@@ -171,10 +173,55 @@
         background-color: #fff;
         margin: 10px 0;
         text-align: center;
-        .new_message #message_body {
-          width: 100%;
-          min-height: 104px;
-          padding: 10px;
+        .new_comment {
+          textarea {
+            width: 100%;
+            min-height: 104px;
+            padding: 0px;
+          }
+        }
+        .noticeMsg {
+          padding: 8px;
+          font-size: 14px;
+          background-color: #f8f8f8;
+          margin: 10px 0;
+          text-align: left;
+        }
+        .commentBtn {
+          font-size: 18px;
+          line-height: 48px;
+          background: #3CCACE;
+          border: 1px solid #3CCACE;
+          color: #fff;
+          width: 60%;
+          font-size: 18px;
+          border-radius: 100px;
+        }
+      }
+      .links li {
+        float: left;
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #3CCACE;
+        }
+      }
+      .links li:last-child {
+        float: right;
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #3CCACE;
+        }
+      }
+      .relatedItems{
+        a {
+          display: block;
+          margin: 24px 0 8px;
+          color: #3CCACE;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 22px;
         }
       }
     }
