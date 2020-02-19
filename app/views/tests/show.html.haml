@@ -1,0 +1,86 @@
+.single-container
+    .single-header
+
+    .mains
+        .mains__header
+            .mains__header__Inner
+                %h1.mains__header__Inner__icon
+                    = link_to image_tag("logo.png", class: "icon__btn"), "#"
+        .mains__main
+            %h2 購入内容の確認
+            .mains__main__item
+                .mains__main__item__a                    
+                    %h3
+                        = image_tag "https://static.mercdn.net/thumb/photos/m42573841069_1.jpg?1581924969"
+                    .mains__main__item__a__detail
+                        %p.main-item-name
+                            ミネラルウォーター
+                        %p.item-item-price
+                            %span ¥2,180
+                            %span.main-item-price-fee
+                                （税込）送料込み
+            .mains__main__item1
+                .mains__main__item1__b
+                    = form_with(url: "", local: true, method: :post, class: "main-item1__b__buy") do |f|
+                        %ul.mains__main__item1__b__buy__info
+                            %li.buy-price
+                                .buy-price__cell 支払い金額
+                                .buy-price__pay
+                                    %span.buy-price__pay__amount
+                                        ¥2,180
+
+                        %ul.mains__main__item1__b__buy__acordion
+                            %li.buy-price-row
+                                .checkbox-default
+                                    %span{id: "checkbox-wrapper"}
+                                        %input{type: "checkbox", id: "check1"} 
+                                        %label ポイントを使用 (所持ポイント: P0)
+
+            .mains__main__item1
+                .mains__main__item1__c
+                    = form_with( url: "", local: true, method: :post, class: "main-item1__c__buy" ) do |f|
+                        %ul.mains__main__item1__c__buy__payment
+                            %li.mains__main__item1__c__buy__payment__method
+                                .buy-means
+                                    %h3 支払い方法
+                                    %a{href: ''}
+                                        %p.buy-user-text
+                                            %i{ class: "fa fa-plus-circle "}
+                                            %span.buy-register-text
+                                                登録してください
+            .mains__main__item1
+                .mains__main__item1__d
+                    = form_with(url: "", local: true, method: :post, class: "mains__main__item1__d__buy") do |f|
+                        %ul.mains__main__item1__d__buy__place
+                            %li.mains__main__item1__d__buy__place__info
+                                .buy-means
+                                    %h3 配送先
+                                    %a{href: ''}
+                                        %p.buy-user-text
+                                            %i{ class: "fa fa-plus-circle"}
+                                            %span.buy-register-text
+                                                登録してください
+            .mains__main__item1
+                .mains__main__item1__e
+                    %p 
+                    %button{ class: "main-item_e_btn"}
+                        購入する
+
+        .mains__footer
+            %ul.mains__footer__content
+                %li
+                    = link_to "#" do
+                        会社概要（運営会社）
+                %li
+                    = link_to "#" do
+                        プライバシーポリシー
+                %li
+                    = link_to "#" do
+                        FURIMA利用規約
+            .mains__footer__logo
+                = link_to image_tag('logo.png', class: 'logo__image'), "#"
+            %p.mains__footer__c-mark
+                © FURIMA,inc.
+    
+    
+
