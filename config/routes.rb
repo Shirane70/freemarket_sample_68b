@@ -7,12 +7,12 @@ Rails.application.routes.draw do
   #root to: "users#howToPay"
   # get 'users/logout' to: 'user#logout'
   #resources :informations, only: [:index]
-  #resources :tests, only: [:show]
-  # resources :users, only: [:index]
-  #resources :users do
-    #collection do
-      #get :logout
-      #get :howToPay
-    #end
-  #end 
+  resources :tests, only: [:show]
+   resources :users, only: [:index]
+  resources :users do
+    collection do
+      get :logout
+      get :howToPay
+    end
+  end 
 end
