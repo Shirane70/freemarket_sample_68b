@@ -198,20 +198,23 @@
           border-radius: 100px;
         }
       }
-      .links li {
-        float: left;
-        list-style: none;
-        a {
-          text-decoration: none;
-          color: #3CCACE;
+      .links {
+        padding-bottom: 10px;
+        li {
+          float: left;
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: #3CCACE;
+          }
         }
-      }
-      .links li:last-child {
-        float: right;
-        list-style: none;
-        a {
-          text-decoration: none;
-          color: #3CCACE;
+        li:last-child {
+          float: right;
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: #3CCACE;
+          }
         }
       }
       .relatedItems{
