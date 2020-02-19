@@ -53,7 +53,7 @@
               
               width: 34px;
               height: 34px;
-              border: 0;
+              border: 1px #3CCACE solid;
               cursor: pointer;
               background-color: #3CCACE;
             }
@@ -508,7 +508,6 @@
                       font-family: FontAwesome;
                       content: "\f005";
                     }
-
                   }
                 }
               }

@@ -7,8 +7,8 @@
         = form_with url: informations_path, local: true do |form|
           = form.text_field :text, class: "searchBox--input", placeholder: "キーワードから探す"
           .search-rightBox
-            = form.submit "", class: "submit-btn"
-            = image_tag("icon-search-1.png", width: '20px', height: '20px', class: "search-icon")
+            = button_tag type: :submit, class: "submit-btn" do
+              = image_tag("icon-search-1.png", width: '20px', height: '20px', class: "search-icon")
     .nav
       %ul.listsLeft
         %li.listsLeft__item.listsLeft__item--first

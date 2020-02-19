@@ -1,0 +1,32 @@
+.myPage_tab_buyItems
+  %h2.myPage_tab_head
+    購入した商品
+  %ul.myList_tabs
+    %li.notification_tab
+      = link_to '#', class: "notification_link" do
+        .notification_text
+          取引中
+    %li.toDo_tab
+      = link_to '#', class: "toDo_link" do
+        .toDo_text
+          過去の取引
+  %ul.tab_content_box
+    %li.tab_content
+      = link_to '#', class: "link_tab" do
+        .image_content
+          = image_tag 'member_photo_noimage_thumb', class: 'image'
+        .textBox
+          《なんと10,000円！》あの噂のカレーTシャツを転売中🍛👕✨
+          .timeBox
+            .timeIcon
+              %i.far.fa-clock
+            .timeNumberText
+              1256
+            .timeText
+              時間前
+        %i.fas.fa-chevron-right
+    %li.jump_to_galary
+      .linkBox
+        = link_to '#', class: "galary_link" do
+          .showGalary_text
+            一覧を見る
